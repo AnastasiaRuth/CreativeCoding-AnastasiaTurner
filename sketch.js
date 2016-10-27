@@ -1,24 +1,24 @@
 function setup() {
-  createCanvas(500,500)
-  background(240);
+  createCanvas(700,500)
+  background(0);
 }
 
 function draw() {
-  line(250,250,50,500)
-  line(250,250,470,500)
-  line(300,300,10,500)
-  line(300,300,490,500)
-  line(350,350,500,500)
-  line(350,350,90,500)
-  line(200,200,30,500)
-  line(200,200,450,500)
-  line(150,150,70,500)
-  line(150,150,430,500)
-  line(100,100,80,500)
-  line(100,100,410,500)
-  line(50,50,60,500)
-  line(50,50,390,500)
-  line(0,0,60,500)
-  line(0,0,370,500)
+  beginShape()      //square 1
+  fill(255)
+  quad(0,250,225,0,450,250,225,500)
+  fill(255,0,0)
+  strokeWeight(0)
+  quad(450,250,397,190,340,250,397,310)
+  endShape()
+  
+  
+  beginShape()    //square 2
+  fill(255)
+  quad(600,0,700,100,600,200,500,100)
+  fill(0,255,0)
+  strokeWeight(0)
+  quad(600,200,550,150,600,100,650,150)
+  endShape()
   
 }
