@@ -1,0 +1,22 @@
+function setup() {
+  createCanvas(400,400);
+  
+}
+
+function draw() {
+  background(220);
+  noStroke();
+  fill(0,13,55);
+  rect(0,0,200,200);
+  
+  fill(255);
+  translate(90,90);
+  rect(0,0,200,200);
+  
+  fill(0,13,55);
+  translate(110, 110);
+  rect(0,0,200,200);
+  
+  
+  
+}
