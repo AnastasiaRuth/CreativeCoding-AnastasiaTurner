@@ -1,0 +1,21 @@
+
+var angle = 0.0;
+var offset = 60;
+var scalar = 3;
+var speed = .10;
+
+
+function setup() {
+  createCanvas(300, 300);
+  fill(0);
+  background(0, 255, 0, 160);
+}
+
+function draw() {
+  var x = offset + cos(angle) * scalar;
+  var y = offset + sin(angle) * scalar;
+  ellipse( x, y, 4, 4);
+  angle += speed;
+  scalar += speed;
+  
+}
