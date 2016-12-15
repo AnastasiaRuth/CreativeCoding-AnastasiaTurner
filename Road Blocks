@@ -1,0 +1,23 @@
+
+roadTop = 4
+roadHeight = 3
+
+var roadBlock;
+
+function preload(){      
+  roadBlock = loadImage("roadBlock.jpg");
+}
+
+ function setup(){
+  createCanvas(400, 400);
+}
+
+function draw(){
+  image(roadBlock, 0, 0);
+  roadTop = 4 * windowHeight/10;
+  roadHeight = 3 * windowHeight/10; 
+  fill(155);
+  rect( 0, roadTop, windowWidth, roadHeight);
+
+  
+}
