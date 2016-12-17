@@ -1,0 +1,22 @@
+//Final Submission #2 Black Hole
+
+
+var angle = 250;
+var offset = 50;
+var scalar = 5;
+var speed = .40;
+
+function setup() {
+  createCanvas(500, 500);
+  fill(0);
+  background(50);
+}
+
+function draw() {
+  var x = offset + cos(angle) * scalar;
+  var y = offset + sin(angle) * scalar;
+  triangle( x, y, 250, 250);
+  angle += speed;
+  scalar += speed;
+  
+}
