@@ -1,5 +1,10 @@
+/**
+** Kevin's comments:  I like the idea you have here.  I think you could have gone further and added parameters to your Eye function.
+Also, please only use lowercase names for functions that are not Objects.  More code comments inline...
+*/
 var centerOfEye = 300;
 var numOfRings = 90;
+//what is 'e' for?
 var e = 0;
 var colorRange = 50;
 
@@ -42,6 +47,7 @@ function Eye(){
 
 function keyPressed(){
   e = random(360);
+  //I'm not sure why you have a redraw call in here since it's already being called in your draw loop.
   redraw()
 }  
 
