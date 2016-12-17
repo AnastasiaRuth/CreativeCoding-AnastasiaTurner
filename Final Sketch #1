@@ -1,0 +1,56 @@
+//Final Submission #1
+
+
+function setup() {
+  createCanvas(500, 500);
+  bg = color(0, 255, 0);
+}
+
+
+function draw() {
+  background(bg);
+  
+  push();
+  translate(width * .5, height * .5);
+  rotate(radians(frameCount));
+  star( 0, 0, 30, 70, 5);
+  pop();
+  
+  activities();
+  
+}
+
+
+function activities() {
+  fill(0);
+  textSize(10);
+  textStyle(BOLD);
+  text("School", 330, 285);
+  text("Job", 150, 285);
+  text("Significant Other", 210, 160);
+  text("Friendships", 140, 190);
+  text("Career", 170, 320);
+  text("Hobbies", 135, 240); 
+  text("Organizations", 300, 190);
+  text("Health", 310, 320);
+  text("Happiness", 325, 240 );
+  text("Myself", 230, 350);
+  
+}
+
+function star( x, y, radius1, radius2, numOfPoints) {   
+  var angle = TWO_PI / numOfPoints
+  var halfAngle = angle/2 
+  beginShape();
+  for (a = 0; a < TWO_PI; a += angle) {
+    var sx = x + cos(a) * radius2
+    var sy = y + sin(a) * radius2
+    vertex(sx, sy);
+    sx = x + cos(a + halfAngle) * radius1
+    sy = y + sin(a + halfAngle) * radius1
+    vertex(sx, sy);
+  }
+  endShape(CLOSE);
+  
+
+}
