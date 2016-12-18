@@ -1,0 +1,31 @@
+var waveLength1 = 150.0;
+var waveLength2 = 100.0;
+var pointCount = 0;
+
+function setup(){
+  createCanvas(500,500);
+}
+
+function draw(){
+  if(pointCount > 10000){
+    noLoop();
+  }
+  noFill();
+  strokeWeight(1);
+  stroke(100);
+  translate( width/2, height/2);
+  
+beginShape();
+  for(var a = 0; a < pointCount; a++){
+    var x = sin( a / waveLength1 * TWO_PI) * 200;
+    var y = sin( a / waveLength2 * TWO_PI) * 200;
+  
+ 
+  vertex(x,y); 
+  }
+endShape();
+
+fill(200, 200, 50);
+ellipse(x, y, 10, 10);
+pointCount++;
+}
