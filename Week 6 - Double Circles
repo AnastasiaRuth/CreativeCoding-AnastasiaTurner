@@ -1,0 +1,24 @@
+function setup() {
+  createCanvas(500, 500);
+}
+
+function draw() {
+  background(100);
+  translate(50, 100);
+  for (var x = 0; x < 500; x+=100) {
+    for(var a = 0; a < 500; a+=100) {
+      push();
+      translate(x,a);
+      dCircle();
+      pop();
+    }
+  }
+  
+}
+function dCircle() {
+  noStroke();
+  fill(0, 0, 50);
+  ellipse( -20, -65, 30, 30); // left circle
+  ellipse(20, -65, 30, 30); // right circle
+
+}
