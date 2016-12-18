@@ -2,7 +2,6 @@ Midterm Submission
 
 var centerOfEye = 300;
 var numOfRings = 90;
-var e = 0;
 var colorRange = 50;
 
 function setup() {
@@ -20,7 +19,7 @@ function draw() {
   for (var i = 0; i < numOfRings; i ++){        // Outer ring
     var randomRing = random( e - colorRange, e + colorRange);
     fill (randomRing, 100, 100);
-    Eye();
+    eye();
  
   }
 }
@@ -28,7 +27,7 @@ function draw() {
   
 
 
-function Eye(){
+function eye(){
   beginShape();
   arc(centerOfEye, centerOfEye, centerOfEye, centerOfEye - 50, PI, TWO_PI);
   arc(centerOfEye, centerOfEye, centerOfEye, centerOfEye - 50, 0, TWO_PI);
@@ -44,7 +43,6 @@ function Eye(){
 
 function keyPressed(){
   e = random(360);
-  redraw()
 }  
 
   
